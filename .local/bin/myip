@@ -1,0 +1,18 @@
+#!/bin/bash
+# use curl to get IP
+IP=$(curl -s https://get.geojs.io/v1/ip)
+
+# echo to terminal
+echo ${IP}
+
+# requires libnotify
+# uncomment next line to create a notification using the notify daemon
+#notify-send --urgency=normal --expire-time=5000 "Public IP " "\nYour public IP address is $IP\n"
+
+# requires yad
+# uncomment next line to use yad to display a message box
+#yad --title="Public IP" --text="Your public IP is '"$IP"'" --button=OK --center --width=300 --height=100
+
+# requires zenity
+# uncomment next line to use zenity to display a message
+#zenity --info --text "Your public IP is '"$IP"'" --no-wrap
