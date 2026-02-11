@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Get free space on /home (human-readable)
+FREE=$(df -h /home | awk 'NR==2 {print $4}')
+
+echo "🏠 $FREE"
