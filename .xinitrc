@@ -1,22 +1,12 @@
 #!/bin/sh
 
-# Execute:
+# Load X resources if present
+[ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
 
-#sxhkd &
-#numlockx &
-#ufw &
-#nm-applet &
-#xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1200 &
-#xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 3840x2160 --rate 50 --scale .7x.7 &
-#~/.fehbg &
+# Start keyring if you use it
+eval "$(gnome-keyring-daemon --start)"
 
-# turn off Display Power Management Service (DPMS)
-xset -dpms
-setterm -blank 0 -powerdown 0
-
-# turn off black Screensaver
-xset s off
-
+# Start i3
 exec i3
 #exec openbox
 
