@@ -1,4 +1,5 @@
 #!/bin/sh
+# fix issues
 
 # Load X resources if present
 [ -f ~/.Xresources ] && xrdb -merge ~/.Xresources
