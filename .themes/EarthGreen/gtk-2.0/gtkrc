@@ -1,0 +1,11 @@
+style "earthgreen" {
+    bg[NORMAL]      = "#202b15"
+    fg[NORMAL]      = "#bfc5c6"
+    base[NORMAL]    = "#202b15"
+    text[NORMAL]    = "#bfc5c6"
+
+    bg[SELECTED]    = "#7ea55b"
+    fg[SELECTED]    = "#202b15"
+}
+
+class "*" style "earthgreen"

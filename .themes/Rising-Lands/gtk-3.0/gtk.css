@@ -1,0 +1,124 @@
+/* =========================
+   Rising Lands GTK Theme
+   ========================= */
+
+@define-color bg_color #1a1411;
+@define-color fg_color #c89f6a;
+
+@define-color base_color #2b1f1a;
+@define-color text_color #c89f6a;
+
+@define-color selected_bg_color #a77a57;
+@define-color selected_fg_color #0f0b09;
+
+@define-color tooltip_bg_color #3a2a22;
+@define-color tooltip_fg_color #d7b47f;
+
+@define-color border_color #8c6448;
+
+@define-color accent_color #d7b47f;
+@define-color warning_color #c86a5a;
+
+/* =========================
+   Global
+   ========================= */
+
+* {
+    background-color: @bg_color;
+    color: @fg_color;
+    border-color: @border_color;
+}
+
+/* =========================
+   Windows
+   ========================= */
+
+window {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+button {
+    background-color: @base_color;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: @accent_color;
+    color: @selected_fg_color;
+}
+
+button:active {
+    background-color: @selected_bg_color;
+}
+
+/* =========================
+   Entries / Inputs
+   ========================= */
+
+entry {
+    background-color: @base_color;
+    color: @text_color;
+    border: 1px solid @border_color;
+}
+
+entry:focus {
+    border-color: @accent_color;
+}
+
+/* =========================
+   Headerbars
+   ========================= */
+
+headerbar {
+    background-color: #2b1f1a;
+    color: @fg_color;
+    border-bottom: 1px solid @border_color;
+}
+
+/* =========================
+   Tooltips
+   ========================= */
+
+tooltip {
+    background-color: @tooltip_bg_color;
+    color: @tooltip_fg_color;
+    border-radius: 4px;
+}
+
+/* =========================
+   Selection
+   ========================= */
+
+selection {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+/* =========================
+   Scrollbars
+   ========================= */
+
+scrollbar slider {
+    background-color: @accent_color;
+    border-radius: 6px;
+}
+
+scrollbar trough {
+    background-color: @base_color;
+}
+
+/* =========================
+   Links
+   ========================= */
+
+link {
+    color: @accent_color;
+}
+
