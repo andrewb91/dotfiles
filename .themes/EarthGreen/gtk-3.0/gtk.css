@@ -1,24 +1,41 @@
 /* ============================================= */
-/*  EarthGreen GTK3 Theme                        */
-/*  Based on your colorscheme                    */
-/*  Deep olive background + asparagus accents    */
+/*  EarthGreen GTK3 Theme - Fixed Selection      */
+/*  Deep olive + asparagus green                 */
 /* ============================================= */
 
 @define-color bg_color          #202b15;  /* black-olive */
 @define-color base_color        #202b15;
 @define-color fg_color          #bfc5c6;  /* silver-sand */
 @define-color text_color        #bfc5c6;
-@define-color muted             #8c999b;  /* granny-smith */
-@define-color accent            #7ea55b;  /* asparagus - main highlight */
-@define-color accent2           #70815c;  /* limed-ash */
-@define-color warm              #ac9843;  /* husk */
-@define-color border_color      #4a5a56;  /* nandor */
-@define-color dark_bg           #485131;  /* verdigris (for panels, headers) */
+@define-color muted             #8c999b;
+@define-color accent            #7ea55b;  /* asparagus - highlight */
+@define-color accent2           #70815c;
+@define-color warm              #ac9843;
+@define-color border_color      #4a5a56;
+@define-color dark_bg           #485131;  /* verdigris for panels */
 
 * {
     background-color: @bg_color;
     color: @fg_color;
     border-color: @border_color;
+}
+
+/* === CRITICAL FIX: Selected items === */
+*:selected,
+selection,
+treeview:selected,
+list row:selected,
+menuitem:selected,
+button:selected,
+entry:selected {
+    background-color: @accent;
+    color: #202b15 !important;   /* dark text on bright green - high contrast */
+    border-color: @accent;
+}
+
+*:selected:focus {
+    background-color: #8cb46f;   /* slightly brighter variant when focused */
+    color: #202b15 !important;
 }
 
 /* Buttons */
@@ -38,8 +55,7 @@ button:hover {
 button:active,
 button:checked {
     background-color: @accent;
-    color: #202b15;   /* dark text on bright green */
-    border-color: @accent;
+    color: #202b15 !important;
 }
 
 /* Entry / Input fields */
@@ -51,39 +67,27 @@ entry:focus {
     border-radius: 6px;
 }
 
-entry:selected {
+entry selection {
     background-color: @accent;
-    color: #202b15;
+    color: #202b15 !important;
 }
 
-/* Selection & Highlight */
-selection,
-*:selected {
-    background-color: @accent;
-    color: #202b15;
-}
-
-/* Headers, Toolbars, Menus */
-headerbar,
-toolbar,
-menubar,
+/* Menus, Lists, Treeviews */
 .menu,
-.menuitem {
-    background-color: @dark_bg;
+.menuitem,
+treeview,
+list,
+.view {
+    background-color: @bg_color;
     color: @fg_color;
-    border-color: @border_color;
 }
 
-menuitem:hover {
-    background-color: @accent;
-    color: #202b15;
+menuitem:hover,
+treeview row:hover {
+    background-color: #4a5a56;
 }
 
 /* Scrollbars */
-scrollbar {
-    background-color: @bg_color;
-}
-
 scrollbar slider {
     background-color: @accent2;
     border-radius: 4px;
@@ -93,24 +97,11 @@ scrollbar slider:hover {
     background-color: @accent;
 }
 
-/* Treeview / Lists */
-treeview,
-list,
-.view {
-    background-color: @bg_color;
-    color: @fg_color;
-}
-
-treeview:selected,
-list row:selected {
-    background-color: @accent;
-    color: #202b15;
-}
-
-/* Window & Frames */
-window,
-dialog {
-    background-color: @bg_color;
+/* Window & Headers */
+headerbar,
+toolbar,
+menubar {
+    background-color: @dark_bg;
     color: @fg_color;
 }
 
@@ -124,8 +115,4 @@ tooltip {
 /* Links */
 *:link {
     color: @accent;
-}
-
-*:link:visited {
-    color: #9eb68c;
 }
