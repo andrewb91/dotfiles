@@ -1,17 +1,19 @@
 /* ============================================= */
-/*  OliveFern v2 - Lighter Background            */
+/*  OliveFern v5 - #5f8243 Main Background      */
 /* ============================================= */
 
-@define-color bg          #2a3a22;     /* lighter than #202b15 */
-@define-color base        #2f3f26;
-@define-color text        #bfc5c6;
-@define-color muted       #8c999b;
-@define-color fern        #4a713f;
-@define-color limed       #70815c;
-@define-color accent      #7ea55b;     /* highlight */
-@define-color dark_olive  #485131;
-@define-color header      #3a4a36;
+@define-color bg          #5f8243;     /* Main background - your new choice */
+@define-color base        #6f944e;     /* Slightly lighter for entries/lists */
+@define-color text        #1f2a1a;     /* Dark text for excellent contrast */
+@define-color light_text  #e8ede9;     /* Light text for buttons/header */
 
+@define-color accent      #7ea55b;     /* Asparagus - highlight */
+@define-color fern        #4a713f;
+@define-color header      #4f6f3a;     /* Slightly darker header */
+@define-color border      #3a5a32;
+@define-color muted       #8c999b;
+
+/* Main windows */
 .background,
 window,
 dialog {
@@ -19,31 +21,32 @@ dialog {
     color: @text;
 }
 
-/* Main content areas */
+/* Content areas (entries, lists, textviews) */
 entry,
 textview,
-.list, .view, treeview {
+.list, .view, treeview,
+scrolledwindow {
     background-color: @base;
     color: @text;
-    border-color: @limed;
+    border-color: @border;
 }
 
 /* Buttons */
 button {
-    background-color: @fern;
-    color: @text;
-    border-color: @limed;
+    background-color: #4a713f;
+    color: @light_text;
+    border-color: @border;
 }
 
 button:hover {
-    background-color: @limed;
+    background-color: #5f8243;
 }
 
 button:active,
 button:checked,
 button.suggested-action {
     background-color: @accent;
-    color: @bg;
+    color: @text;
 }
 
 /* Selection / Focus */
@@ -53,64 +56,68 @@ row:selected,
 .scale highlight,
 .switch:checked slider {
     background-color: @accent;
-    color: @bg;
-}
-
-/* Headerbar */
-headerbar,
-.titlebar {
-    background-color: @header;
     color: @text;
 }
 
+/* Headerbar / Titlebar */
+headerbar,
+.titlebar {
+    background-color: @header;
+    color: @light_text;
+}
+
 headerbar button {
-    background-color: @dark_olive;
+    background-color: #3a5a32;
+    color: @light_text;
 }
 
 /* Menus & Popovers */
 menu,
 popover,
 .context-menu {
-    background-color: @dark_olive;
+    background-color: @base;
     color: @text;
+    border-color: @border;
 }
 
 menuitem:hover,
 row:hover {
     background-color: @accent;
-    color: @bg;
+    color: @text;
 }
 
 /* Scrollbars */
 scrollbar slider {
-    background-color: @muted;
+    background-color: #33422b;
 }
 
 scrollbar slider:hover {
     background-color: @accent;
 }
 
-/* Tabs & Notebook */
+/* Tabs */
 notebook tab {
-    background-color: @fern;
+    background-color: @header;
+    color: @light_text;
 }
 
 notebook tab:checked {
     background-color: @accent;
-    color: @bg;
+    color: @text;
 }
 
-/* Progress */
+/* Progress bars */
 progressbar progress {
     background-color: @accent;
 }
 
 /* Sidebar */
 .sidebar {
-    background-color: #26331e;
+    background-color: #4f6f3a;
+    color: @text;
 }
 
-/* General */
+/* General borders */
 * {
-    border-color: #55664a;
+    border-color: @border;
 }
