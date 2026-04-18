@@ -1,0 +1,116 @@
+/* ============================================= */
+/*  OliveFern v2 - Lighter Background            */
+/* ============================================= */
+
+@define-color bg          #2a3a22;     /* lighter than #202b15 */
+@define-color base        #2f3f26;
+@define-color text        #bfc5c6;
+@define-color muted       #8c999b;
+@define-color fern        #4a713f;
+@define-color limed       #70815c;
+@define-color accent      #7ea55b;     /* highlight */
+@define-color dark_olive  #485131;
+@define-color header      #3a4a36;
+
+.background,
+window,
+dialog {
+    background-color: @bg;
+    color: @text;
+}
+
+/* Main content areas */
+entry,
+textview,
+.list, .view, treeview {
+    background-color: @base;
+    color: @text;
+    border-color: @limed;
+}
+
+/* Buttons */
+button {
+    background-color: @fern;
+    color: @text;
+    border-color: @limed;
+}
+
+button:hover {
+    background-color: @limed;
+}
+
+button:active,
+button:checked,
+button.suggested-action {
+    background-color: @accent;
+    color: @bg;
+}
+
+/* Selection / Focus */
+selection,
+:selected,
+row:selected,
+.scale highlight,
+.switch:checked slider {
+    background-color: @accent;
+    color: @bg;
+}
+
+/* Headerbar */
+headerbar,
+.titlebar {
+    background-color: @header;
+    color: @text;
+}
+
+headerbar button {
+    background-color: @dark_olive;
+}
+
+/* Menus & Popovers */
+menu,
+popover,
+.context-menu {
+    background-color: @dark_olive;
+    color: @text;
+}
+
+menuitem:hover,
+row:hover {
+    background-color: @accent;
+    color: @bg;
+}
+
+/* Scrollbars */
+scrollbar slider {
+    background-color: @muted;
+}
+
+scrollbar slider:hover {
+    background-color: @accent;
+}
+
+/* Tabs & Notebook */
+notebook tab {
+    background-color: @fern;
+}
+
+notebook tab:checked {
+    background-color: @accent;
+    color: @bg;
+}
+
+/* Progress */
+progressbar progress {
+    background-color: @accent;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #26331e;
+}
+
+/* General */
+* {
+    border-color: #55664a;
+}

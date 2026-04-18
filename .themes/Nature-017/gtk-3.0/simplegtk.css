@@ -1,0 +1,16 @@
+@define-color background #202b15;
+@define-color base      #202b15;
+@define-color text      #bfc5c6;
+@define-color accent    #7ea55b;
+
+.background, window, dialog { background-color: @background; color: @text; }
+
+entry, textview, .view { background-color: #485131; color: @text; }
+
+button { background-color: #4a713f; color: @text; }
+button:hover { background-color: #70815c; }
+button:active, button:checked { background-color: @accent; color: #202b15; }
+
+:selected, row:selected, button:checked { background-color: @accent; color: #202b15; }
+
+headerbar { background-color: #4a5a56; color: @text; }
