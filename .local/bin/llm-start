@@ -1,0 +1,9 @@
+#!/bin/bash
+
+MODEL="hermes3:8b"
+
+echo "Loading $MODEL..."
+
+docker exec ollama ollama run "$MODEL" "Ready" >/dev/null 2>&1 &
+
+echo "$MODEL load requested."

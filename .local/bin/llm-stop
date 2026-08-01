@@ -1,0 +1,9 @@
+#!/bin/bash
+
+MODEL="hermes3:8b"
+
+echo "Unloading $MODEL..."
+
+docker exec ollama ollama stop "$MODEL"
+
+echo "$MODEL unloaded."
