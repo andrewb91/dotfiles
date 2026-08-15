@@ -1,0 +1,141 @@
+# Reload functions
+# find key to bind $ xev
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + control + a
+	~/.local/bin/rofi-mixer -theme ~/.config/rofi/themes/forest-dark.rasi
+	
+super + shift + a
+	~/.local/bin/AirplaneMode.sh	
+
+super + control + b
+   brave-origin-nightly
+
+super + control + c
+	~/.local/bin/conky.sh
+
+#super + d
+#	rofi -show drun 
+	
+#super + shift + e
+	exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu
+
+super + control + e
+	~/.local/bin/rofi-beats
+
+super + control + f
+	ghostty -e spf
+
+super + control + g
+	lutris lutris:rungameid/1
+
+super + control + h
+   ~/.local/bin/headset.sh
+
+super + control + m
+   ~/.local/bin/toggle-monitor.sh
+
+super + control + n
+	~/.local/bin/rofi-wifi-menu.sh -theme ~/.config/rofi/themes/forest-dark.rasi
+
+super + control + o
+   ~/.local/bin/start-llm
+
+super + shift + o
+   ~/.local/bin/stop-llm
+
+super + shift + p
+   ~/.local/bin/polybar-reset.sh
+
+super + control + p
+	~/.local/bin/picom.sh
+
+super + control + q
+	~/.local/bin/keybind-finder.sh
+
+super + control + r
+   redshift 
+
+super + control + s
+	steam
+
+super + shift + t
+	alacritty -e curl -fsSL christitus.com/linux | sh
+
+super + control + t
+	ghostty -e tmux
+
+super + control + v
+	ghostty -e nvim
+
+super + shift + v
+	~/.local/bin/rofi-vpn.sh -theme ~/.config/rofi/themes/forest-dark.rasi
+
+super + control + w
+	~/.local/bin/workspace.sh
+
+super + shift + w
+   feh --no-fehbg --bg-scale '/usr/share/backgrounds/Nature_0017.jpg'	
+
+super + control + x
+   i3lock-fancy
+
+#super + shift + d
+	~/.local/bin/brightness_dn.sh
+
+super + shift + m
+ 	~/.local/bin/resolution.sh
+
+F4
+	pamixer -t #mute/unmute
+	
+F2
+	pamixer -i 10 #increase volume
+	
+F3
+	pamixer -d 10 #decrease volume
+
+super + Print
+	scrot
+	
+#  Laptop only commands
+XF86MonBrightnessUp
+	xbacklight -inc 15 #backlight up
+
+XF86MonBrightnessDown
+	xbacklight -dec 15 #backlight down
+	
+super + XF86MonBrightnessUp
+	~/.local/bin/brightnessup.sh #monitor brightness up
+
+super + XF86MonBrightnessDown
+	~/.local/bin/brightness_dn.sh #monitor brightness dn
+	
+XF86AudioMute
+	pamixer -t #mute/unmute
+	
+XF86AudioRaiseVolume
+	pamixer -i 10 #increase volume	
+	
+XF86AudioLowerVolume
+	pamixer -d 10 #decrease volume
+	
+# For Future Use??
+#Focus the window in the given direction.
+#super + {h,j,k,l}
+#	i3-msg -t command focus {left,down,up,right}
+    
+#Move focused window in the given direction.
+#super + shift + {h,j,k,l}
+#	i3-msg -t command move {left,down,up,right}   
+ 
+#Open terminal.
+#super + Return
+#	alacritty
+
+# Close/kill current window
+#super + q
+#	i3-msg kill window

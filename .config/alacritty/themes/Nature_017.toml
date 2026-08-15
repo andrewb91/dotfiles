@@ -1,0 +1,56 @@
+# =====================================
+#   Custom Alacritty Theme (Wallpaper)
+# =====================================
+
+[window]
+padding = { x = 6, y = 6 }
+dynamic_padding = true
+opacity = 0.90
+blur = true
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 13.0
+
+# -------------------------------------
+# PRIMARY COLORS
+# -------------------------------------
+[colors.primary]
+background = "#202b15"     # black-olive
+foreground = "#bfc5c6"     # silver-sand
+
+[colors.cursor]
+text = "#202b15"
+cursor = "#7ea55b"         # asparagus
+
+[colors.selection]
+text = "#202b15"
+background = "#70815c"     # limed-ash (soft highlight)
+
+# -------------------------------------
+# NORMAL COLORS
+# -------------------------------------
+[colors.normal]
+black   = "#202b15"   # background
+red     = "#ac9843"   # husk (warm warning)
+green   = "#4a713f"   # fern-green
+yellow  = "#7ea55b"   # asparagus (highlight)
+blue    = "#8c999b"   # granny-smith
+magenta = "#4a5a56"   # nandor (muted teal-gray)
+cyan    = "#485131"   # verdigris
+white   = "#bfc5c6"   # silver-sand (text)
+
+# -------------------------------------
+# BRIGHT COLORS
+# -------------------------------------
+[colors.bright]
+black   = "#485131"   # verdigris
+red     = "#d1b85e"   # brighter husk
+green   = "#6d9d61"   # brighter fern-green
+yellow  = "#a9c789"   # brighter asparagus
+blue    = "#aeb8ba"   # bright granny-smith
+magenta = "#62736f"   # bright nandor
+cyan    = "#70815c"   # limed-ash
+white   = "#ffffff"   # bright white

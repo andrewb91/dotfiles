@@ -1,0 +1,173 @@
+[general]
+import = ["themes/nature_017.toml"]
+#import = [
+#"~/.config/alacritty/themes/hypr.toml"
+#]
+# alacritty.toml
+# commented lines are the defaults
+# man 5 alacritty (>0.13) for full config manual
+  
+#import = [
+#"~/.config/alacritty/themes/osakajade.toml"
+#"~/.config/alacritty/keybindings.toml",
+#]
+
+[terminal.shell]
+program               = "/bin/bash"
+#args                  = [ "--login", ]
+
+#working_directory     = "/Files/Computers/Docs"
+#live_config_reload    = true
+#ipc_socket            = true
+
+[env]
+TERM                  = "xterm-256color"
+
+[window]
+dimensions            = { columns = 60, lines = 15 }
+#position              = { x = 0, y = 0 }
+padding               = { x = 5, y = 5 }
+#dynamic_padding       = true
+decorations           = "none"
+opacity               =0.9
+blur                  = true
+#startup_mode          = "Windowed"
+#title                 = "Alacritty"
+#dynamic_title         = true
+#class                 = { instance = "Alacritty", general = "Alacritty" }
+#decorations_theme_variant = "None"
+#resize_increments     = false
+#option_as_alt         = "None"
+
+# Colors (Osaka Jade)
+
+[colors.bright]
+black = '#464e50'
+blue = '#71baf2'
+cyan = '#67cbe7'
+green = '#96d988'
+magenta = '#ce89df'
+red = '#ef7e7e'
+white = '#bdc3c2'
+yellow = '#f4d67a'
+
+[colors.cursor]
+cursor = '#dadada'
+text = '#141b1e'
+
+[colors.normal]
+black = '#232a2d'
+blue = '#67b0e8'
+cyan = '#6cbfbf'
+green = '#8ccf7e'
+magenta = '#c47fd5'
+red = '#e57474'
+white = '#b3b9b8'
+yellow = '#e5c76b'
+
+[colors.primary]
+background = '#000000'
+foreground = '#8ccf7e'
+
+[colors.selection]
+background = '#bfc5c6'
+text = '#70815c'
+
+[scrolling]
+history               = 100000
+multiplier            = 5
+
+[font]
+normal                = { family = "Terminus", style = "Medium" }
+bold                  = { family = "Terminus", style = "Medium" }
+italic                = { family = "Terminus", style = "Medium" }
+bold_italic           = { family = "Terminus", style = "Medium" }
+size                  = 14
+offset                = { x = 0, y = 0 }
+glyph_offset          = { x = 0, y = 0 }
+#builtin_box_drawing   = true
+
+
+# catpuccin-mocha, ported from .yml
+
+#transparent_background_colors = true
+#draw_bold_text_with_bright_colors = true
+
+#[bell]
+#animation             = "EaseOutExpo"
+#duration              = 0
+#color                 = "#C0C5CE"
+#command               = { program = "notify-send", args = ["alacritty", "bell",] }
+
+[selection]
+#semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
+save_to_clipboard     = true
+
+[cursor.style]
+shape                 = "Underline"
+blinking              = "Always"
+
+[cursor.vi_mode_style]
+shape                 = "Underline"
+blinking              = "Off"
+
+[cursor]
+blink_interval        = 500
+blink_timeout         = 0
+#unfocused_hollow      = true
+thickness             = 0.1
+
+[terminal]
+osc52                 = "CopyPaste"
+
+[mouse]
+hide_when_typing      = true
+bindings = [
+  { mouse = "Middle", action = "PasteSelection" },
+]
+
+[hints]
+#alphabet              = "jfkdls;ahgurieowpq"
+
+#[[hints.enabled]]
+#command               = "xdg-open"
+## command             = "open" # On macOS
+## command             = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+#hyperlinks            = true
+#post_processing       = true
+#persist               = false
+#mouse.enabled         = true
+#binding               = { key = "U", mods = "Control|Shift" }
+#regex                 = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[keyboard]
+bindings = [
+  { key = "V",        mods = "Control|Shift", action = "Paste" },
+  { key = "C",        mods = "Control|Shift", action = "Copy" },
+  { key = "Paste",                            action = "Paste" },
+  { key = "Copy",                             action = "Copy" },
+  { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+  { key = "F",        mods = "Control|Shift", action = "SearchForward",     mode = "~Search" },
+  { key = "B",        mods = "Control|Shift", action = "SearchBackward",    mode = "~Search" },
+  { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+  { key = "Equals",   mods = "Control",       action = "IncreaseFontSize" },
+  { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+  { key = "L",        mods = "Control",       action = "ClearLogNotice" },
+  { key = "L",        mods = "Control",       chars  = "\f" },
+  { key = "PageUp",   mods = "Shift",         action = "ScrollPageUp",      mode = "~Alt" },
+  { key = "PageDown", mods = "Shift",         action = "ScrollPageDown",    mode = "~Alt" },
+  { key = "Up",       mods = "Shift",         action = "ScrollLineUp",      mode = "~Alt" },
+  { key = "Down",     mods = "Shift",         action = "ScrollLineDown",    mode = "~Alt" },
+  { key = "Home",     mods = "Shift",         action = "ScrollToTop",       mode = "~Alt" },
+  { key = "End",      mods = "Shift",         action = "ScrollToBottom",    mode = "~Alt" },
+]
+
+
+[debug]
+#render_timer          = false
+#persistent_logging    = false
+#log_level             = "Warn"
+#renderer              = "None"
+#print_events          = false
+#highlight_damage      = false
+#prefer_egl            = false

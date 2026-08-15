@@ -1,0 +1,105 @@
+# i3wm configuration 
+
+bindsym $mod+q kill
+
+set $mod Mod4
+bindsym $mod+Return exec ghostty
+#bindsym $mod+d rofi -show drun
+bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/themes/forest-dark.rasi
+bindsym $mod+shift+e exec rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -theme ~/.config/rofi/themes/forest-dark.rasi
+#bindsym $mod+shift+e exec exec ~/.config/rofi/powermenu.sh
+
+gaps inner 4
+gaps outer 6
+
+# Remove title bars globally (best for tiling)
+default_border pixel 1
+default_floating_border pixel 1
+
+# Optional: make borders even thinner or invisible
+# default_border pixel 0
+# default_floating_border none
+
+font pango:monospace 11
+
+floating_modifier $mod
+
+tiling_drag modifier titlebar
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Left workspace prev
+# press ~ to claim a new workspace
+bindsym $mod+Right exec --no-startup-id i3-new-workspace
+
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+bindsym h resize grow width 5 px or 5 ppt
+bindsym j resize shrink height 5 px or 5 ppt
+bindsym k resize grow height 5 px or 5 ppt
+bindsym l resize shrink width 5 px or 5 ppt
+bindsym Return mode "default"
+bindsym Escape mode "default"
+bindsym $mod+r mode "default"
+}
+
+exec_always --no-startup-id clipmenud
+exec_always sxhkd
+exec_always xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1200
+exec_always --no-startup-id sh -c 'xclip -selection clipboard -o | xclip -selection primary'
+exec_always --no-startup-id sh -c 'xclip -selection primary -o | xclip -selection clipboard'
+exec feh --no-fehbg --bg-scale '/usr/share/backgrounds/Nature_0017.jpg'
+exec_always  --no-startup-id autotiling -sr 1.61
+exec --no-startup-id numlockx
+exec --no-startup-id ufw
+exec --no-startup-id dunst
+exec --no-startup-id blugon
+exec --no-startup-id picom
+exec --no-startup-id ~/.local/bin/touchpad.sh
+exec --no-startup-id ~/.config/polybar/launch.sh
+
+#exec_always --no-startup-id conky
+#for_window [class="Conky"] floating enable
+#for_window [class="Conky"] border none
+
+assign [class="Lutris"] 2
+assign [class="steam"] 2
+#assign [class="firefox"] 3
+assign [class="Terminator"] 3

@@ -1,0 +1,45 @@
+# Darkaneon-green
+# Based on the Neovim Darkaneon-green colors
+
+background = #093d21
+foreground = #e6e6e6
+
+# Cursor
+cursor-color = #09b358
+cursor-text = #093d21
+
+# Selection
+selection-background = #1e5c45
+selection-foreground = #ffffff
+
+# Black / gray
+palette = 0=#093d21
+palette = 8=#052413
+
+# Red
+palette = 1=#ed1919
+palette = 9=#ff3333
+
+# Green
+palette = 2=#19ed76
+palette = 10=#10e56f
+
+# Yellow
+palette = 3=#ffc224
+palette = 11=#ffd45c
+
+# Blue
+palette = 4=#7ec0ee
+palette = 12=#9bd5ff
+
+# Magenta
+palette = 5=#b58cff
+palette = 13=#c8aaff
+
+# Cyan
+palette = 6=#4fd1a5
+palette = 14=#72e0bd
+
+# White
+palette = 7=#e6e6e6
+palette = 15=#ffffff

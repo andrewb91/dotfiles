@@ -1,0 +1,40 @@
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    text-color: #bfc5c6; /* Silver Sand */
+}
+
+window {
+    background-color: #202b15; /* Black Olive */
+    border: 2px;
+    border-color: #7ea55b; /* Highlight */
+    opacity: 1.0;
+}
+
+mainbox {
+    padding: 20px;
+}
+
+listview {
+    spacing: 8px;
+}
+
+element {
+    padding: 8px;
+    text-color: #bfc5c6; /* Silver Sand */
+    background-color: #202b15; /* Black Olive */
+}
+
+element selected {
+    background-color: #7ea55b; /* Highlight */
+    text-color: #000000;
+}
+
+prompt {
+    text-color: #7ea55b; /* Highlight */
+    background-color: #202b15; /* Black Olive */
+}
+
+textbox {
+    text-color: #bfc5c6; /* Silver Sand */
+    background-color: #202b15; /* Black Olive */
+}

@@ -1,0 +1,7 @@
+# Ghostty config
+
+theme = Darkaneon-green
+font-family = IosevkaTerm Nerd Font
+font-size = 12
+confirm-close-surface = false
+window-decoration = none

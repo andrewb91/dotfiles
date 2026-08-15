@@ -1,0 +1,98 @@
+/* ============================================= */
+/*  Rofi theme based on your GTK3 colors        */
+/*  Accent: #09B358 (green)                     */
+/* ============================================= */
+
+* {
+    font: "Sans 11";
+    background-color: @bg_color;
+    text-color: @fg_color;
+    border-color: @border_color;
+}
+
+@define-color bg_color          mix(shade(#09B358, 1.5), black, 0.75);   /* your bg_color */
+@define-color fg_color          rgba(255, 255, 255, 0.85);              /* your fg_color */
+@define-color base_color        shade(@bg_color, 0.6);
+@define-color selected_bg       #09B358;                                 /* your selected_bg_color */
+@define-color selected_fg       #ffffff;                                 /* your selected_fg_color */
+@define-color border_color      shade(@bg_color, 1.3);
+@define-color inactive_bg       alpha(@fg_color, 0.15);
+@define-color inactive_fg       alpha(@fg_color, 0.6);
+
+/* Main window */
+window {
+    location: center;
+    width: 42%;
+    padding: 12px;
+    border: 2px;
+    border-radius: 12px;
+    border-color: @border_color;
+    background-color: @bg_color;
+    transparency: "real";
+}
+
+/* Input bar */
+inputbar {
+    padding: 10px 12px;
+    background-color: @base_color;
+    border-radius: 8px;
+    border: 1px solid @inactive_bg;
+}
+
+entry {
+    padding: 6px 10px;
+    background-color: transparent;
+    text-color: @fg_color;
+}
+
+/* List */
+listview {
+    padding: 8px 0;
+    lines: 10;
+    spacing: 2px;
+    scrollbar: false;
+    fixed-height: true;
+}
+
+/* Individual items */
+element {
+    padding: 8px 12px;
+    border-radius: 6px;
+    spacing: 12px;
+}
+
+element normal normal {
+    background-color: transparent;
+    text-color: @fg_color;
+}
+
+element normal urgent {
+    text-color: #FFC224;
+}
+
+element selected {
+    background-color: @selected_bg;
+    text-color: @selected_fg;
+}
+
+element-icon {
+    size: 20px;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+/* Message bar (no results, etc.) */
+textbox {
+    padding: 8px 12px;
+    background-color: @base_color;
+    text-color: @inactive_fg;
+}
+
+/* Scrollbar (if enabled) */
+scrollbar {
+    background-color: alpha(@fg_color, 0.1);
+    handle-color: @selected_bg;
+    handle-width: 6px;
+}

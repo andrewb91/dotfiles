@@ -1,0 +1,80 @@
+@define-color bg_color          #2a2a2e;
+@define-color fg_color          #e0e0e0;
+@define-color base_color        #1f1f23;
+@define-color selected_bg       #09B358;
+@define-color selected_fg       #ffffff;
+@define-color border_color      #3a3a42;
+@define-color inactive_bg       rgba(224, 224, 224, 0.15);
+@define-color inactive_fg       rgba(224, 224, 224, 0.55);
+
+/* Global */
+* {
+    font: "Sans 11";
+    background-color: @bg_color;
+    text-color: @fg_color;
+    border-color: @border_color;
+}
+
+/* Main window */
+window {
+    location: center;
+    width: 42%;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 12px;
+    background-color: @bg_color;
+}
+
+/* Input bar */
+inputbar {
+    padding: 10px 12px;
+    background-color: @base_color;
+    border-radius: 8px;
+    border: 1px solid @inactive_bg;
+}
+
+entry {
+    padding: 6px 10px;
+    background-color: transparent;
+    text-color: @fg_color;
+}
+
+/* List */
+listview {
+    padding: 8px 0;
+    lines: 10;
+    spacing: 2px;
+    scrollbar: false;
+}
+
+/* Items */
+element {
+    padding: 9px 12px;
+    border-radius: 6px;
+    spacing: 12px;
+}
+
+element normal normal {
+    background-color: transparent;
+    text-color: @fg_color;
+}
+
+element selected {
+    background-color: @selected_bg;
+    text-color: @selected_fg;
+}
+
+element-icon {
+    size: 22px;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+/* Message bar */
+textbox {
+    padding: 8px 12px;
+    background-color: @base_color;
+    text-color: @inactive_fg;
+}
