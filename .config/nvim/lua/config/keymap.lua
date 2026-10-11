@@ -1,4 +1,12 @@
 -- ===================== Keymaps ========================
+-- Buffer Navigation
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", {
+    desc = "Previous buffer",
+})
+
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", {
+    desc = "Next buffer",
+})
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", "<cmd>FloatermToggle floaterm1<CR>", {

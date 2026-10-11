@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo external > ~/.config/hypr-riced/monitor-mode
+hyprctl reload

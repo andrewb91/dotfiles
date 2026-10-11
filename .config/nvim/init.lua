@@ -15,6 +15,7 @@ require("config.statusline")
 
 -- ====================== Plugins ======================
 vim.pack.add({
+  "https://github.com/RRethy/base16-nvim",
   "https://github.com/stevearc/oil.nvim",
 --  "https://github.com/echasnovski/mini.statusline",
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
@@ -32,6 +33,7 @@ vim.pack.add({
 -- ====================== Plugin Setup ======================
 
 --require("mini.statusline").setup()
+require('base16-colorscheme')
 require("mason").setup()
 require("fzf-lua").setup()
 require("which-key").setup()
@@ -80,14 +82,17 @@ vim.lsp.enable("lua_ls")
 
 -- ====================== Appearance ======================
 
-local ok, err = pcall(vim.cmd.colorscheme, "Darkaneon-green")
+--local ok, err = pcall(vim.cmd.colorscheme, "Darkaneon-green")
 
-if not ok then
-    vim.notify(
-        "Could not load colorscheme Darkaneon-green: " .. err,
-        vim.log.levels.WARN
-    )
-end
+--if not ok then
+--    vim.notify(
+--        "Could not load colorscheme Darkaneon-green: " .. err,
+--        vim.log.levels.WARN
+--    )
+--end
 
 -- ====================== Final Messages ======================
---vim.notify("✓ Config loaded successfully", vim.log.levels.INFO)
+vim.notify("✓ Config loaded successfully", vim.log.levels.INFO)
+
+local ok, matugen = pcall(require, 'matugen')
+if ok then matugen.setup() end

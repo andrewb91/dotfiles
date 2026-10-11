@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "base16-nvim": {
+      "rev": "09944b3120451d2881dc8cfb13c85c11949f477d",
+      "src": "https://github.com/RRethy/base16-nvim"
+    },
     "fzf-lua": {
       "rev": "05e44d38de0a79c11fba5f7bf8138791b1dbdd1e",
       "src": "https://github.com/ibhagwan/fzf-lua"
@@ -9,7 +13,7 @@
       "src": "https://github.com/nvimdev/lspsaga.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "67029ccdac1ef8941e13b826417bc0ffac24cc86",
+      "rev": "9d28935aa95fa6c1dc7c4d6747f101a72a8a4bec",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
@@ -29,7 +33,7 @@
       "src": "https://github.com/echasnovski/mini.statusline"
     },
     "nvim-lspconfig": {
-      "rev": "51dbf5359da86721662c87ca10eb73add973737b",
+      "rev": "221c43884319e791519f0d6c94a7f2fbcd653278",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tree.lua": {
@@ -50,7 +54,7 @@
       "src": "https://github.com/chomosuke/typst-preview.nvim"
     },
     "vim-floaterm": {
-      "rev": "bb4ba7952e906408e1f83b215f55ffe57efcade6",
+      "rev": "0e8e95f7be74b900bc7d3bc54d9b65211b264ace",
       "src": "https://github.com/voldikss/vim-floaterm"
     },
     "which-key.nvim": {

@@ -1,9 +1,14 @@
 # ~/.bash_profile
-#
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx   # remove the exec to remain logged in when your wm ends
-fi
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-echo -n "somepass" | gnome-keyring-daemon --start --components=secrets,ssh
-eval `keychain --eval id_rsa`
+if [[ -z $DISPLAY && -z $WAYLAND_DISPLAY && $(tty) == /dev/tty1 ]]; then
+    choice=$(printf 'Hyprland\ni3\n' | fzf --prompt='Session: ' --layout=reverse)
+
+    case "$choice" in
+        Hyprland)
+            exec start-hyprland -- --config ~/.config/hypr/hyprland.lua
+            ;;
+        i3)
+            exec startx
+            ;;
+    esac
+fi
