@@ -44,28 +44,25 @@ hl.bind(
 
 hl.bind(
     "SUPER + CTRL + M",
-    hl.dsp.exec_cmd("virtualbox")
+    hl.dsp.exec_cmd("~/.local/bin/hypr_toggle.sh")
 )
 
 hl.bind(
     "SUPER + CTRL + N",
     hl.dsp.exec_cmd(
-        "qs -c noctalia --daemon ipc call settings toggle"
-    )
+        "qs -c noctalia --daemon ipc call settings toggle")
 )
 
 hl.bind(
     "SUPER + SHIFT + N",
     hl.dsp.exec_cmd(
-        "~/.local/bin/rofi-wifi-menu.sh"
-    )
+        "~/.local/bin/rofi-wifi-menu.sh")
 )
 
 hl.bind(
     "SUPER + SHIFT + R",
     hl.dsp.exec_cmd(
-        "~/.local/bin/hypr-reload.sh"
-    )
+        "~/.local/bin/hypr-reload.sh")
 )
 
 hl.bind(
@@ -86,8 +83,7 @@ hl.bind(
 hl.bind(
     "SUPER + SHIFT + V",
     hl.dsp.exec_cmd(
-        "~/.local/bin/rofi-vpn.sh"
-    )
+        "~/.local/bin/rofi-vpn.sh")
 )
 
 hl.bind(
@@ -98,8 +94,7 @@ hl.bind(
 hl.bind(
     "SUPER + CTRL + W",
     hl.dsp.exec_cmd(
-        "~/.local/bin/workspaces.sh"
-    )
+        "~/.local/bin/workspaces.sh")
 )
 
 hl.bind(

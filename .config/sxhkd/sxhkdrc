@@ -78,7 +78,7 @@ super + control + w
 	~/.local/bin/workspace.sh
 
 super + shift + w
-   feh --no-fehbg --bg-scale '/usr/share/backgrounds/Nature_0017.jpg'	
+   feh --no-fehbg --bg-scale /Files/Pictures/backgrounds/Landscapes/Nature_0017.jpg	
 
 super + control + x
    i3lock-fancy

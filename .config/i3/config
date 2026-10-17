@@ -81,11 +81,12 @@ bindsym $mod+r mode "default"
 }
 
 exec_always --no-startup-id clipmenud
+exec_always feh --no-fehbg --bg-scale /Files/Pictures/backgrounds/Landscapes/Nature_0017.jpg
 exec_always sxhkd
 exec_always xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1200
 exec_always --no-startup-id sh -c 'xclip -selection clipboard -o | xclip -selection primary'
 exec_always --no-startup-id sh -c 'xclip -selection primary -o | xclip -selection clipboard'
-exec feh --no-fehbg --bg-scale '/usr/share/backgrounds/Nature_0017.jpg'
+exec 3221
 exec_always  --no-startup-id autotiling -sr 1.61
 exec --no-startup-id numlockx
 exec --no-startup-id ufw
