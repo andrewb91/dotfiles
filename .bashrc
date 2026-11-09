@@ -12,6 +12,7 @@ alias python="python3"
 alias vim=nvim
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 PS1='[\u@\h \W]\$ '
+export SUDO_EDITOR=nvim
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 

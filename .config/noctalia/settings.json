@@ -276,13 +276,13 @@
         "wifiEnabled": true
     },
     "nightLight": {
-        "autoSchedule": true,
-        "dayTemp": "5500",
+        "autoSchedule": false,
+        "dayTemp": "4500",
         "enabled": true,
-        "forced": false,
+        "forced": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4001"
+        "nightTemp": "4500"
     },
     "notifications": {
         "backgroundOpacity": 0,
