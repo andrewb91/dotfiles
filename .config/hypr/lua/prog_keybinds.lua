@@ -39,12 +39,12 @@ hl.bind(
 
 hl.bind(
     "SUPER + CTRL + H",
-    hl.dsp.exec_cmd("~/.local/bin/hyprsunset.sh")
+    hl.dsp.exec_cmd("~/.local/bin/monitor-external")
 )
 
 hl.bind(
-    "SUPER + CTRL + M",
-    hl.dsp.exec_cmd("~/.local/bin/hypr_toggle.sh")
+    "SUPER + CTRL + L",
+    hl.dsp.exec_cmd("~/.local/bin/monitor-internal")
 )
 
 hl.bind(

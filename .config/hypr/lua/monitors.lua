@@ -8,7 +8,7 @@ if f then
 end
 
 if mode == "external" then
-    dofile(home .. "/.config/hypr/lua/monitors-external.lua")
+    dofile(home .. "/.config/hypr/lua/monitor-external.lua")
 else
-    dofile(home .. "/.config/hypr/lua/monitors-internal.lua")
+    dofile(home .. "/.config/hypr/lua/monitor-internal.lua")
 end

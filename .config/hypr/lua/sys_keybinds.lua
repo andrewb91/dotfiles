@@ -117,8 +117,7 @@ hl.bind(
 -- OTHER
 hl.bind(
     "SUPER + SHIFT + M",
-    hl.dsp.exec_cmd(
-        "~/.local/bin/hypr_toggle.sh toggle")
+    hl.dsp.exec_cmd("/usr/bin/bash /home/drew/.local/bin/hypr_toggle.sh toggle")
   )
 
 hl.bind(
