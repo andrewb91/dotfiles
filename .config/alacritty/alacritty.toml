@@ -1,8 +1,9 @@
 [general]
-]
+import = ["~/.config/alacritty/themes/noctalia.toml"]
+
 #import = [
 #"~/.config/alacritty/themes/hypr.toml"
-]
+
 # alacritty.toml
 # commented lines are the defaults
 # man 5 alacritty (>0.13) for full config manual
