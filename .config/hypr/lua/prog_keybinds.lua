@@ -7,9 +7,17 @@ hl.bind(
     hl.dsp.exec_cmd(terminal)
 )
 
+hl.bind("SUPER + CTRL + T", hl.dsp.submap("terminal"))
+hl.define_submap("terminal", "reset", function()
+    hl.bind("B", hl.dsp.exec_cmd("ghostty -e btop"))
+    hl.bind("T", hl.dsp.exec_cmd("ghostty -e tmux"))
+    hl.bind("V", hl.dsp.exec_cmd("ghostty -e nvim"))
+    
+end)
+
 hl.bind(
     "SUPER + CTRL + A",
-    hl.dsp.exec_cmd("~/.local/bin/default_audio.sh")
+    hl.dsp.exec_cmd("~/.local/bin/AirplaneMode.sh")
 )
 
 hl.bind(
@@ -18,24 +26,29 @@ hl.bind(
 )
 
 hl.bind(
-    "SUPER + CTRL + C",
-    hl.dsp.exec_cmd("~/.local/bin/conky.sh")
-)
-
-hl.bind(
     "SUPER + CTRL + E",
     hl.dsp.exec_cmd("~/.local/bin/rofi-beats")
 )
 
-hl.bind(
-    "SUPER + CTRL + F",
-    hl.dsp.exec_cmd(fileManager)
-)
+hl.bind("SUPER +CTRL + F", hl.dsp.submap("files"))
+hl.define_submap("files", "reset", function()
+    hl.bind("A", hl.dsp.exec_cmd("xdg-open /Files/AI/"))
+    hl.bind("B", hl.dsp.exec_cmd("xdg-open /run/media/drew/36f83a0d-7333-4cde-ae64-b339e202cbd1"))
+    hl.bind("C", hl.dsp.exec_cmd("xdg-open /Files/Computers/"))
+    hl.bind("D", hl.dsp.exec_cmd("xdg-open /Files/Documents/"))
+    hl.bind("G", hl.dsp.exec_cmd("xdg-open /Files/Games/"))
+    hl.bind("H", hl.dsp.exec_cmd("xdg-open /home/drew/"))
+    hl.bind("P", hl.dsp.exec_cmd("xdg-open /Files/Pictures/"))
+    
+end)
 
-hl.bind(
-    "SUPER + CTRL + G",
-    hl.dsp.exec_cmd("lutris lutris:rungameid/1")
-)
+hl.bind("SUPER + CTRL + G", hl.dsp.submap("games"))
+hl.define_submap("games", "reset", function()
+    hl.bind("D", hl.dsp.exec_cmd("lutris lutris:rungameid/1"))
+    hl.bind("L", hl.dsp.exec_cmd("lutris"))
+    hl.bind("S", hl.dsp.exec_cmd("steam"))
+    
+end)
 
 hl.bind(
     "SUPER + CTRL + H",
@@ -46,6 +59,19 @@ hl.bind(
     "SUPER + CTRL + L",
     hl.dsp.exec_cmd("~/.local/bin/monitor-internal")
 )
+
+hl.bind("SUPER + CTRL + M", hl.dsp.submap("ollama"))
+hl.define_submap("ollama", "reset", function()
+    -- Service management
+    hl.bind("S", hl.dsp.exec_cmd("systemctl --user start ollama"))
+    hl.bind("X", hl.dsp.exec_cmd("systemctl --user stop ollama"))
+    hl.bind("R", hl.dsp.exec_cmd("systemctl --user restart ollama"))
+    -- Model management
+    hl.bind("4", hl.dsp.exec_cmd("ghostty -e ollama run qwen3:4b"))
+    hl.bind("8", hl.dsp.exec_cmd("ghostty -e ollama run qwen3:8b"))
+    hl.bind("9", hl.dsp.exec_cmd("ghostty -e ollama run qwen3.5:9b"))
+    
+end)
 
 hl.bind(
     "SUPER + CTRL + N",
@@ -66,29 +92,14 @@ hl.bind(
 )
 
 hl.bind(
-    "SUPER + CTRL + S",
-    hl.dsp.exec_cmd("steam")
-)
-
-hl.bind(
     "SUPER + CTRL + Q",
     hl.dsp.exec_cmd("qs -c noctalia --daemon")
-)
-
-hl.bind(
-    "SUPER + CTRL + T",
-    hl.dsp.exec_cmd(terminal .. " -e tmux")
 )
 
 hl.bind(
     "SUPER + SHIFT + V",
     hl.dsp.exec_cmd(
         "~/.local/bin/rofi-vpn.sh")
-)
-
-hl.bind(
-    "SUPER + CTRL + V",
-    hl.dsp.exec_cmd(terminal .. " -e " .. editor)
 )
 
 hl.bind(
@@ -117,17 +128,17 @@ hl.bind(
 
 hl.bind(
     "F2",
-    hl.dsp.exec_cmd("pamixer -i 10")
+    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+")
 )
 
 hl.bind(
     "F3",
-    hl.dsp.exec_cmd("pamixer -d 10")
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-")
 )
 
 hl.bind(
     "F4",
-    hl.dsp.exec_cmd("pamixer -t")
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
 )
 
 
