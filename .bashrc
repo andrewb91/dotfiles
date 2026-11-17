@@ -18,6 +18,8 @@ export VISUAL='/usr/bin/vim'
 
 export PATH=/home/drew/.local/bin:$PATH
 export HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # Show a directory listing when using 'cd'
 function cd() {
